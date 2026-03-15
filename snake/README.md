@@ -9,7 +9,7 @@ Classic Snake game built as a minimal, dependency-free web project. It runs as s
 - A minimal Node.js HTTP server (`server.js`) serves the static files.
 
 ## Run locally
-1. `cd "/Users/chrisgyde/Documents/Codex Projects/snake"`
+1. `cd "/snake"`
 2. `npm start`
 3. Open `http://localhost:3000`
 

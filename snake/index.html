@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Snake</h1>
+          <p class="subtitle">Arrow keys or WASD to move. Space to pause.</p>
+        </div>
+        <div class="score">
+          Score: <span id="score">0</span>
+        </div>
+      </header>
+
+      <section class="board-wrap">
+        <div id="board" class="board" role="grid" aria-label="Snake board"></div>
+        <div id="overlay" class="overlay hidden">
+          <div class="overlay-card">
+            <h2 id="overlay-title">Game Over</h2>
+            <p id="overlay-message">Press Restart to play again.</p>
+            <button id="restart" class="primary">Restart</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="row">
+          <button data-dir="up" aria-label="Up">Up</button>
+        </div>
+        <div class="row">
+          <button data-dir="left" aria-label="Left">Left</button>
+          <button id="pause" aria-label="Pause">Pause</button>
+          <button data-dir="right" aria-label="Right">Right</button>
+        </div>
+        <div class="row">
+          <button data-dir="down" aria-label="Down">Down</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./snake_logic.js"></script>
+    <script src="./snake.js"></script>
+  </body>
+</html>

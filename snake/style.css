@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f4ee;
+  --ink: #1b1b1b;
+  --muted: #6f6a60;
+  --panel: #ffffff;
+  --grid: #e0d9cd;
+  --snake: #1b1b1b;
+  --food: #c45a2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.score {
+  font-size: 18px;
+  padding: 8px 12px;
+  border: 1px solid var(--grid);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.board-wrap {
+  position: relative;
+  border: 1px solid var(--grid);
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  gap: 2px;
+  aspect-ratio: 1 / 1;
+}
+
+.cell {
+  width: 100%;
+  background: #f0ece4;
+  border-radius: 3px;
+}
+
+.cell.snake {
+  background: var(--snake);
+}
+
+.cell.food {
+  background: var(--food);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(246, 244, 238, 0.85);
+  border-radius: 12px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-card {
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--grid);
+  padding: 16px 20px;
+  border-radius: 10px;
+}
+
+.overlay-card h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.controls {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.controls .row {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--grid);
+  background: var(--panel);
+  cursor: pointer;
+}
+
+button.primary {
+  border-color: var(--ink);
+}
+
+@media (min-width: 700px) {
+  .controls {
+    display: none;
+  }
+}
